@@ -73,3 +73,9 @@ input{
 form .input-field{
   margin-top: 30px;
 }
+
+/* misc */
+
+.material-icons {
+  cursor: pointer;
+}
