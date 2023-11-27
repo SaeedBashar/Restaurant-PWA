@@ -1,7 +1,5 @@
 # Restaurant Recipes PWA
 
-![App Preview](/path/to/app-preview.png)
-
 ## Overview
 
 This is a simple Progressive Web App (PWA) designed for managing recipes used by a restaurant. The app allows users to perform CRUD (Create, Read, Update, Delete) operations on recipes. It is built using HTML, CSS, and JavaScript, and the backend is powered by Firebase Firestore. Materialize CSS and icons are used for styling.
@@ -14,11 +12,11 @@ This is a simple Progressive Web App (PWA) designed for managing recipes used by
 
 ## Screenshots
 
-![Screenshot 1](img/desktop.png)
-![Screenshot 2](img/desktop1.png)
-![Screenshot 3](img/mobile.jpg)
-![Screenshot 4](img/mobile1.jpg)
-![Screenshot 5](img/mobile2.jpg)
+![Screenshot 1](screenshots/desktop.png)
+![Screenshot 2](screenshots/desktop1.png)
+![Screenshot 3](screenshots/mobile.jpg)
+![Screenshot 4](screenshots/mobile1.jpg)
+![Screenshot 5](screenshots/mobile2.jpg)
 
 ## Getting Started
 
