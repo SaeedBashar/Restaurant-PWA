@@ -25,7 +25,7 @@ db.collection('recipes').onSnapshot(snapshot=>{
         }
 
         if(change.type === 'modified'){
-
+            updateRecipe(change.doc.data(), change.doc.id);
         }
     });
 })
@@ -51,8 +51,25 @@ form.addEventListener('submit', evt=>{
 const recipeContainer = document.querySelector('.recipes')
 recipeContainer.addEventListener('click', evt=>{
     if(evt.target.tagName === 'I'){
-        const id = evt.target.getAttribute('data-id');
-        db.collection('recipes').doc(id).delete()
-        .catch(err=>console.log(err))
+        if(evt.target.innerText == 'delete_outline'){
+            const id = evt.target.getAttribute('data-id');
+            db.collection('recipes').doc(id).delete()
+            .catch(err=>console.log(err))
+        }
+
+        if(evt.target.innerText === 'edit'){
+            let panelId = evt.target.getAttribute('data-id');
+            let panel = document.querySelector(`.card-panel[data-id='${panelId}']`)
+
+            let title = panel.querySelector('.recipe-details .recipe-title').innerText;
+            let ingredients = panel.querySelector('.recipe-details .recipe-ingredients').innerText;
+
+            let formEl = document.querySelector('form');
+            formEl.elements['title'].value = title;
+            formEl.elements['ingredients'].value = ingredients;
+            formEl.elements['submit-btn'].innerText = "Edit";
+
+            document.querySelector('.add-recipe-btn').click();
+        }
     }
 })

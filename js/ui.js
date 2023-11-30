@@ -19,6 +19,7 @@ const renderRecipe = (data, id)=>{
         <div class="recipe-ingredients">${data.ingredients}</div>
       </div>
       <div class="recipe-delete">
+        <i class="material-icons blue-text" data-id="${id}">edit</i>
         <i class="material-icons red-text" data-id="${id}">delete_outline</i>
       </div>
     </div>
@@ -30,4 +31,12 @@ const renderRecipe = (data, id)=>{
 const removeRecipe = id=>{
   const recipe = document.querySelector(`.recipe[data-id=${id}`);
   recipe.remove();
+}
+
+const updateRecipe = (data, id)=>{
+
+}
+
+const setRecipteToUpdate = (id)=>{
+  
 }
